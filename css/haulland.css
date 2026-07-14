@@ -1868,6 +1868,7 @@ label {
 }
 
 .mobile-phone-link { display: none; }
+.mobile-only { display: none; }
 
 @media screen and (max-width: 767px) {
   .sticky-nav {
@@ -2683,6 +2684,8 @@ html, body {
     border-bottom-width: 1px;
     border-bottom-color: rgba(255,255,255,0.1);
   }
+
+  .mobile-only { display: block; }
 
   /* Mobile phone number link */
   .mobile-phone-link {
