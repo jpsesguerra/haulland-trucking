@@ -92,6 +92,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // ── Phone click tracking ──
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href^="tel:"]');
+    if (link) {
+      gtag('event', 'phone_click', { page_path: window.location.pathname });
+    }
+  });
+
   // ── Web3Forms submission ──
   document.querySelectorAll('form[action="https://api.web3forms.com/submit"]').forEach(function (form) {
     form.addEventListener('submit', function (e) {
