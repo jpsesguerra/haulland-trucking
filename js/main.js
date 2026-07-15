@@ -112,6 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
             form.style.display = 'none';
             var success = form.closest('.contact-form').querySelector('.success');
             if (success) success.style.display = 'block';
+            gtag('event', 'form_submit', { page_path: window.location.pathname });
           } else {
             alert('Something went wrong. Please try again or call us directly.');
           }
