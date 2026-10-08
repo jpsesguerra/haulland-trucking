@@ -1867,7 +1867,6 @@ label {
   margin-bottom: 60px;
 }
 
-.mobile-phone-link { display: none; }
 .mobile-only { display: none; }
 
 @media screen and (max-width: 767px) {
@@ -2687,26 +2686,6 @@ html, body {
 
   .mobile-only { display: block; }
 
-  /* Mobile phone number link */
-  .mobile-phone-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--white) !important;
-    font-family: Gotham, sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    padding: 16px 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    text-decoration: none;
-    letter-spacing: 0.5px;
-  }
-
-  .mobile-phone-link:hover {
-    background-color: rgba(255,255,255,0.04);
-    color: var(--white) !important;
-  }
-
   /* Mobile Order Now button */
   .brokrete-trigger.nav {
     display: block;
@@ -2832,4 +2811,87 @@ html, body {
   border: none;
   cursor: pointer;
   line-height: 1;
+}
+
+/* Header "Call Us" CTA */
+.nav-call-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid var(--white);
+  background-color: #0000;
+  margin-left: 12px;
+  margin-right: 16px;
+  padding: 8px 16px;
+  font-family: Gotham, sans-serif;
+  color: var(--white);
+  transition: background-color .2s;
+}
+
+.nav-call-cta:hover {
+  background-color: var(--maroon);
+}
+
+.nav-call-label {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 14px;
+}
+
+.nav-call-number {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.brokrete-trigger.nav {
+  background-color: var(--maroon);
+}
+
+.brokrete-trigger.nav:hover {
+  background-color: var(--maroon2);
+}
+
+@media screen and (max-width: 767px) {
+  .nav-call-cta {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 16px 20px;
+    border: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .nav-call-cta:hover {
+    background-color: rgba(255,255,255,0.04);
+  }
+
+  .nav-call-label,
+  .nav-call-number {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .nav-call-label::after {
+    content: ":";
+  }
+
+  /* Stacked full-width CTA buttons (hero + Free Estimate section) */
+  .hero-cta-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn,
+  .horizontal-2-grid > .btn {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+  }
 }
