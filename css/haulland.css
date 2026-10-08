@@ -1867,6 +1867,7 @@ label {
   margin-bottom: 60px;
 }
 
+.mobile-phone-link { display: none; }
 .mobile-only { display: none; }
 
 @media screen and (max-width: 767px) {
@@ -2686,6 +2687,26 @@ html, body {
 
   .mobile-only { display: block; }
 
+  /* Mobile phone number link */
+  .mobile-phone-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--white) !important;
+    font-family: Gotham, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+  }
+
+  .mobile-phone-link:hover {
+    background-color: rgba(255,255,255,0.04);
+    color: var(--white) !important;
+  }
+
   /* Mobile Order Now button */
   .brokrete-trigger.nav {
     display: block;
@@ -2853,38 +2874,43 @@ html, body {
   background-color: var(--maroon2);
 }
 
+/* Hero "Call Us" button — mobile only, matches the hero Order Now button */
+.hero-call-btn,
+.btn.mobile-only {
+  display: none;
+}
+
+.hero-call-btn {
+  border: 2px solid var(--white);
+  background-color: #0000;
+  padding: 14px 20px;
+  font-family: Gotham, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  transition: background-color .2s;
+}
+
+.hero-call-btn:hover {
+  background-color: var(--maroon);
+}
+
 @media screen and (max-width: 767px) {
+  .hero-call-btn,
+  .btn.mobile-only {
+    display: block;
+  }
+
+  /* Mobile menu uses the injected phone link instead */
   .nav-call-cta {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 8px;
-    margin: 0;
-    padding: 16px 20px;
-    border: 0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-
-  .nav-call-cta:hover {
-    background-color: rgba(255,255,255,0.04);
-  }
-
-  .nav-call-label,
-  .nav-call-number {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 24px;
-  }
-
-  .nav-call-label::after {
-    content: ":";
+    display: none;
   }
 
   /* Stacked full-width CTA buttons (hero + Free Estimate section) */
   .hero-cta-group {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
     width: 100%;
   }
 
