@@ -2984,3 +2984,61 @@ html, body {
 .lightbox-image {
   height: auto;
 }
+
+/* Footer app download badges (ToughCommerce ordering app) */
+.app-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.app-badge {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 50px;
+  border: 1px solid #a6a6a6;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--black);
+  color: var(--white);
+  text-decoration: none;
+  transition: border-color .2s;
+}
+
+.app-badge:hover {
+  border-color: var(--white);
+  color: var(--white);
+}
+
+.app-badge img {
+  display: block;
+  height: 48px;
+  width: auto;
+}
+
+.app-badge-android {
+  gap: 10px;
+  width: 157px;
+  padding: 0 12px;
+}
+
+.app-badge-android .app-badge-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.app-badge-text {
+  display: flex;
+  flex-direction: column;
+  font-family: Gotham, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.app-badge-small {
+  font-size: 11px;
+  line-height: 13px;
+}

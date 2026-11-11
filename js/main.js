@@ -143,6 +143,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  // ── App download clicks (footer badges; links open in a new tab) ──
+  document.addEventListener('click', function (e) {
+    var badge = e.target.closest('a.app-badge');
+    if (badge) {
+      track('app_download_click', {
+        page_path: window.location.pathname,
+        platform: badge.dataset.platform || 'unknown',
+        cta_location: ctaLocation(badge)
+      });
+    }
+  });
+
   // ── Web3Forms submission ──
   document.querySelectorAll('form[action="https://api.web3forms.com/submit"]').forEach(function (form) {
     form.addEventListener('submit', function (e) {
