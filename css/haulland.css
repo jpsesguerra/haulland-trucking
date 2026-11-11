@@ -2979,3 +2979,8 @@ html, body {
     line-height: 16px;
   }
 }
+
+/* Keep photos with width/height attributes at their natural ratio */
+.lightbox-image {
+  height: auto;
+}
