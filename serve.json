@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/bin-rentals/:town", "destination": "/bin-rentals-:town.html" }
+  ]
+}

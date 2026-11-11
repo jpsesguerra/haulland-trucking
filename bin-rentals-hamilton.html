@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    LOCATION PAGE TEMPLATE (service + town)
+    Served at /bin-rentals/hamilton via .htaccess (and serve.json locally).
+    To add a town: copy this file to bin-rentals-<town>.html, then update
+    everything marked LOCATION below, then run: node scripts/sync-shared.mjs
+    The bin cards between the SHARED:bin-types markers are copied from
+    bin-rentals.html. Never edit them here.
+  -->
+  <meta charset="utf-8">
+  <!-- LOCATION: title, description, canonical, og:url, schema -->
+  <title>Bin Rentals Hamilton ON | Roll-Off &amp; Mini Bins | Haulland Trucking</title>
+  <meta name="description" content="Bin rentals in Hamilton for homeowners and contractors. 6 to 40 yard bins for clean fill, rubble, asphalt and garbage. Call or order online.">
+  <meta property="og:title" content="Bin Rentals Hamilton ON | Roll-Off &amp; Mini Bins | Haulland Trucking">
+  <meta property="og:description" content="Bin rentals in Hamilton for homeowners and contractors. 6 to 40 yard bins for clean fill, rubble, asphalt and garbage. Call or order online.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bin Rentals Hamilton ON | Roll-Off &amp; Mini Bins | Haulland Trucking">
+  <meta name="twitter:description" content="Bin rentals in Hamilton for homeowners and contractors. 6 to 40 yard bins for clean fill, rubble, asphalt and garbage. Call or order online.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="https://res.cloudinary.com/du0witbcr/image/upload/haulland-trucking/favicon.jpg" type="image/x-icon">
+  <link rel="apple-touch-icon" href="https://res.cloudinary.com/du0witbcr/image/upload/haulland-trucking/webclip.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <!-- Root-absolute paths: this page is served one folder deep -->
+  <link href="/css/normalize.css" rel="stylesheet">
+  <link href="/css/haulland.css?v=20261111" rel="stylesheet">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-09X2V66G72"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-09X2V66G72');
+  </script>
+  <!-- ReachCode -->
+  <script async src="https://cdn.rlets.com/capture_configs/c84/64e/89b/93e43049895f87c83550e1d.js"></script>
+
+  <!-- Service JSON-LD. Provider address is the Google Business listing address (no Hamilton office). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Bin rental",
+    "name": "Bin Rentals in Hamilton",
+    "description": "Roll-off and mini bin rentals for homeowners and contractors in Hamilton, ON: clean fill, clean rubble or asphalt, and garbage bins for renovations, clean-outs, roofing, landscaping and construction.",
+    "url": "https://www.haullandtrucking.com/bin-rentals/hamilton",
+    "areaServed": {
+      "@type": "City",
+      "name": "Hamilton",
+      "containedInPlace": {"@type": "AdministrativeArea", "name": "Ontario"}
+    },
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Haulland Trucking Inc.",
+      "url": "https://www.haullandtrucking.com",
+      "telephone": "+19055379832",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "#921",
+        "addressLocality": "Branchton",
+        "addressRegion": "ON",
+        "postalCode": "N0B 1L0",
+        "addressCountry": "CA"
+      }
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.haullandtrucking.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Bin Rentals", "item": "https://www.haullandtrucking.com/bin-rentals"},
+      {"@type": "ListItem", "position": 3, "name": "Hamilton", "item": "https://www.haullandtrucking.com/bin-rentals/hamilton"}
+    ]
+  }
+  </script>
+  <link rel="canonical" href="https://www.haullandtrucking.com/bin-rentals/hamilton">
+  <meta property="og:url" content="https://www.haullandtrucking.com/bin-rentals/hamilton">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header id="nav" class="sticky-nav">
+    <div class="nav-grid">
+      <div class="nav-holder">
+        <a href="/" class="nav-logo-link">
+          <img src="https://res.cloudinary.com/du0witbcr/image/upload/haulland-trucking/Haulland-Full-Logo.svg" alt="Haulland Trucking" class="nav-logo">
+        </a>
+        <nav class="nav-menu" role="navigation">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/about-us" class="nav-link">About Us</a>
+          <div class="nav-link nav-dropdown-wrap">
+            <div class="nav-link---inner">
+              <div>Services</div>
+              <div class="icon"></div>
+            </div>
+            <nav class="nav-dropdown">
+              <a href="/aggregate-gravel-soil-delivery" class="dropdown-link">Gravel, Aggregate, Soil &amp; Fill Delivery</a>
+              <a href="/dirt-rubble-snow-removal" class="dropdown-link">Dirt, Rubble &amp; Snow Removal</a>
+              <a href="/bin-rentals" class="dropdown-link active">Bin Rentals</a>
+              <a href="/contractor-yard-supply" class="dropdown-link">Contractor Yard Supply</a>
+              <a href="/excavation-partner" class="dropdown-link">Excavation</a>
+            </nav>
+          </div>
+          <a href="/contact-us" class="nav-call-cta btn" data-tel="tel:+19055379832"><span class="nav-call-label">Call Us</span><span class="nav-call-number">905-537-9832</span></a>
+          <a href="#" class="brokrete-trigger nav btn">Order Now</a>
+        </nav>
+        <button class="menu-button" aria-label="Toggle navigation">
+          <div class="icon-menu">&#9776;</div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-filler"></div>
+
+  <!-- Intro, areas served, primary CTAs -->
+  <div class="section---white margin-80-top">
+    <div class="container-1200"></div>
+    <div class="vertical-holder center bins">
+      <img src="https://res.cloudinary.com/du0witbcr/image/upload/haulland-trucking/Halland-Bins---Logo.svg" loading="lazy" alt="Haulland Bins" class="haulland-bins-logo">
+      <div class="_2-column-grid fill">
+        <div class="container-900 margin-36-bottom">
+          <nav aria-label="Breadcrumb" class="font-14-gray">
+            <a href="/" class="inline-link">Home</a> &rsaquo;
+            <a href="/bin-rentals" class="inline-link">Bin Rentals</a> &rsaquo;
+            <span aria-current="page">Hamilton</span>
+          </nav>
+          <!-- LOCATION: H1 and intro copy -->
+          <h1 class="h1-black">Bin Rentals in Hamilton</h1>
+          <p class="paragraph-light">Haulland Trucking rents roll-off bins and mini bins to homeowners and contractors across Hamilton. Whether you're gutting a kitchen, clearing out a basement or digging out a backyard, there's a bin sized for the job.</p>
+          <p class="paragraph-light">Our bins handle waste from renovations, clean-outs, roofing, landscaping and construction, with separate bins for clean fill, clean rubble or asphalt, and garbage so every load goes where it should.</p>
+          <p class="paragraph-light _40-bottom">We run a diverse fleet of trucks that are live dispatched, which keeps turnaround quick for bin drop-offs and pickups across Hamilton.</p>
+
+          <!-- LOCATION: areas served -->
+          <h3>Areas we serve in Hamilton</h3>
+          <div class="_2-column-grid margin-36-bottom">
+            <ul role="list" class="list">
+              <li><p class="paragraph-light no-margin">Hamilton</p></li>
+              <li><p class="paragraph-light no-margin">Stoney Creek</p></li>
+              <li><p class="paragraph-light no-margin">Ancaster</p></li>
+              <li><p class="paragraph-light no-margin">Dundas</p></li>
+            </ul>
+            <ul role="list" class="list">
+              <li><p class="paragraph-light no-margin">Waterdown / Flamborough</p></li>
+              <li><p class="paragraph-light no-margin">Binbrook</p></li>
+              <li><p class="paragraph-light no-margin">Hamilton Mountain</p></li>
+            </ul>
+          </div>
+
+          <div class="cta-row margin-24-bottom">
+            <a href="#" class="brokrete-trigger btn" data-cta="service_locations_order">Order Now</a>
+            <a href="tel:+19055379832" class="call-cta btn" data-cta="service_locations_contact">Contact Us: 905-537-9832</a>
+          </div>
+        </div>
+        <div class="vertical-holder">
+          <a href="/images/Bins-1.png" class="service-lightbox---fill">
+            <img src="https://res.cloudinary.com/du0witbcr/image/upload/haulland-trucking/Bins-1.png" loading="lazy" alt="Haulland roll-off bin" class="lightbox-image">
+          </a>
+          <div class="_3-column-grid">
+            <a href="/images/Bins-2.png" class="service-lightbox---fill">
+              <img src="https://res.cloudinary.com/du0witbcr/image/upload/haulland-trucking/Bins-2.png" loading="lazy" alt="Roll-off bin" class="lightbox-image">
+            </a>
+            <a href="/images/Mini-Bin---resized.jpg" class="service-lightbox---fill">
+              <img src="https://res.cloudinary.com/du0witbcr/image/upload/haulland-trucking/Mini-Bin---resized.jpg" loading="lazy" alt="Mini bin" class="lightbox-image">
+            </a>
+            <a href="/images/Hooklift---917.jpg" class="service-lightbox---fill">
+              <img src="https://res.cloudinary.com/du0witbcr/image/upload/haulland-trucking/Hooklift---917.jpg" loading="lazy" alt="Hook lift truck" class="lightbox-image">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bin types and sizes (shared with /bin-rentals) -->
+  <section id="Pricing" class="section-grey">
+    <div class="container-1200">
+      <div class="vertical-holder center">
+        <h2 class="red margin-36-bottom">Bin Types and Sizes</h2>
+
+        <!-- SHARED:bin-types:start (source of truth; copied to location pages by scripts/sync-shared.mjs) -->
+        <div class="vertical-holder fill">
+          <div class="vertical-holder">
+            <h2 class="margin-36-bottom">Clean Fill</h2>
+          </div>
+          <div class="horizontal-3-grid">
+            <div class="bin-cards">
+              <h4>Mini bin</h4>
+              <h3>6 Yard<br>Clean Fill Bin</h3>
+              <p class="font-14-gray">32&quot; tall 12&#x27; long and 5&#x27; wide</p>
+              <a href="#" class="brokrete-trigger small full btn">Order Now</a>
+            </div>
+            <div class="bin-cards">
+              <h4>Mini bin</h4>
+              <h3>16 Yard<br>Clean Fill Bin</h3>
+              <p class="font-14-gray">40&quot; tall 24&#x27; long 8&#x27; wide</p>
+              <a href="#" class="brokrete-trigger small full btn">Order Now</a>
+            </div>
+            <div class="bin-cards">
+              <h4>Roll off bin</h4>
+              <h3>20 Yard<br>Clean Fill Bin</h3>
+              <p class="font-14-gray">42&quot; tall 24&#x27; long 8&#x27; wide</p>
+              <a href="#" class="brokrete-trigger small full btn">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="vertical-holder fill">
+          <div class="vertical-holder center">
+            <h2 class="no-margin">Clean Rubble or Asphalt</h2>
+            <p class="font-14-gray">(Materials Must Not Be Mixed)</p>
+          </div>
+          <div class="horizontal-3-grid">
+            <div class="bin-cards">
+              <h4>Mini bin</h4>
+              <h3>6 Yard<br>Rubble/Asphalt</h3>
+              <p class="font-14-gray">32&quot; tall 12&#x27; long and 5&#x27; wide</p>
+              <a href="#" class="brokrete-trigger small full btn">Order Now</a>
+            </div>
+            <div class="bin-cards">
+              <h4>Roll off bin</h4>
+              <h3>16 Yard<br>Rubble/Asphalt</h3>
+              <p class="font-14-gray">40&quot; tall 24&#x27; long 8&#x27; wide</p>
+              <a href="#" class="brokrete-trigger small full btn">Order Now</a>
+            </div>
+            <div class="bin-cards">
+              <h4>Roll off bin</h4>
+              <h3>20 Yard<br>Rubble/Asphalt</h3>
+              <p class="font-14-gray">42&quot; tall 24&#x27; long 8&#x27; wide</p>
+              <a href="#" class="brokrete-trigger small full btn">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="vertical-holder fill">
+          <h2 class="margin-36-bottom">Garbage Bins</h2>
+          <div class="_4-column-grid">
+            <div class="bin-cards">
+              <h4>Mini bin</h4>
+              <h3>6 Yard<br>Garbage Bin</h3>
+              <p class="no-margin">Includes 1 Ton</p>
+              <p class="font-14-gray">32&quot; tall 12&#x27; long and 5&#x27; wide</p>
+              <a href="#" class="brokrete-trigger small full btn">Order Now</a>
+            </div>
+            <div class="bin-cards">
+              <h4>Mini bin</h4>
+              <h3>14 Yard<br>Garbage Bin</h3>
+              <p class="no-margin">Includes 1 Ton</p>
+              <p class="font-14-gray">54&quot; tall 12&#x27; long 7&#x27; wide</p>
+              <a href="#" class="brokrete-trigger small full btn">Order Now</a>
+            </div>
+            <div class="bin-cards">
+              <h4>Mini bin</h4>
+              <h3>20 Yard<br>Garbage Bin</h3>
+              <p class="no-margin">Includes 1.5 Ton</p>
+              <p class="font-14-gray">60&quot; tall 14&#x27; long 8&#x27; wide</p>
+              <a href="#" class="brokrete-trigger small full btn">Order Now</a>
+            </div>
+            <div class="bin-cards">
+              <h4>Roll off bin</h4>
+              <h3>40 Yard<br>Garbage Bin</h3>
+              <p class="no-margin">Includes 3 Tons</p>
+              <p class="font-14-gray">96&quot; tall 24&#x27; long 8&#x27; wide</p>
+              <a href="#" class="brokrete-trigger small full btn">Order Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- SHARED:bin-types:end -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- What can go in each bin + Estimate form -->
+  <div id="Contact" class="section---white">
+    <div class="container-1200">
+      <div class="horizontal-2-grid">
+        <div class="vertical-holder margin-30-right">
+          <h2>What can go in each bin</h2>
+          <ul role="list" class="list">
+            <li><p class="paragraph-light"><strong>Clean fill bins:</strong> clean dirt, topsoil, grass or sod only. No garbage whatsoever.</p></li>
+            <li><p class="paragraph-light"><strong>Clean rubble or asphalt bins:</strong> concrete and asphalt can't be mixed unless arranged with dispatch when you order, and can't contain any garbage or dirt.</p></li>
+            <li><p class="paragraph-light"><strong>Garbage bins:</strong> household or construction waste.</p></li>
+            <li><p class="paragraph-light"><strong>Never allowed:</strong> hazardous materials such as paint, chemicals, liquids, tires, propane tanks, medical or radioactive material.</p></li>
+          </ul>
+          <p class="paragraph-light">Extra charges may apply if these guidelines aren't followed. <a href="/bin-rentals#Contact" class="inline-link">Read the full service agreement</a>.</p>
+        </div>
+        <div class="vertical-holder">
+          <div id="Estimate" class="contact-form">
+            <form id="bin-estimate-form" name="bin-estimate-form" action="https://api.web3forms.com/submit" method="post" class="form">
+              <input type="hidden" name="access_key" value="a29c2119-8653-47eb-b9ee-e5156dd2a526">
+              <input type="hidden" name="subject" value="New Bin Rental Estimate — Haulland Trucking">
+              <input type="hidden" name="from_name" value="Haulland Trucking Website">
+              <!-- LOCATION: source_page -->
+              <input type="hidden" name="source_page" value="bin-rentals-hamilton">
+              <input type="checkbox" name="botcheck" style="display:none;">
+              <h2>Get a Free Estimate</h2>
+              <p>Need a bin in Hamilton? Fill out the form or give us a call and we'll help you choose the right bin for your project.</p>
+              <p>Our quotation is free of charge and there is no commitment needed.</p>
+              <div class="vertical-holder-2 edge">
+                <label for="name-2">Name*</label>
+                <input class="text-field" maxlength="256" name="name" placeholder="" type="text" id="name-2" required>
+                <div class="service-2-grid contact">
+                  <div class="vertical-holder-2">
+                    <label for="Email-2">Email*</label>
+                    <input class="text-field" maxlength="256" name="Email" placeholder="" type="email" id="Email-2" required>
+                  </div>
+                  <div class="vertical-holder">
+                    <label for="Phone-2">Phone*</label>
+                    <input class="text-field" maxlength="256" name="Phone" placeholder="" type="tel" id="Phone-2" required>
+                  </div>
+                </div>
+                <label for="service-2">What service/s do you require?*</label>
+                <select id="service-2" name="Service" required class="text-field dropdown">
+                  <option value="">Select a service</option>
+                  <option value="Roll-Off Bin Service" selected>Roll-Off Bin Service</option>
+                  <option value="Gravel Delivery">Gravel Delivery</option>
+                  <option value="Aggregates Delivery">Aggregates Delivery</option>
+                  <option value="Soil Delivery">Soil Delivery</option>
+                  <option value="Clean Fill Delivery">Clean Fill Delivery</option>
+                  <option value="Other">Other</option>
+                </select>
+                <label for="location-2">Where are you located*</label>
+                <input class="text-field" maxlength="256" name="Location" placeholder="e.g.: Stoney Creek, Ancaster, Dundas" type="text" id="location-2" required>
+                <label for="time-2">When do you need our service*</label>
+                <input class="text-field" maxlength="256" name="Service-Time" placeholder="" type="text" id="time-2" required>
+              </div>
+              <div class="vertical-holder-2">
+                <label for="Message-2">Message</label>
+                <textarea name="Message" maxlength="5000" id="Message-2" placeholder="" class="text-area"></textarea>
+                <input type="submit" class="btn button-orange-small" value="Submit">
+              </div>
+            </form>
+            <div class="success" style="display:none;">
+              <div>Thank you! Your submission has been received!<br>We&#x27;ll be in touch with you shortly</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Local projects. TODO: replace placeholders with real Hamilton job photos (no stock or AI images). -->
+  <section class="section-grey">
+    <div class="container-1200">
+      <div class="vertical-holder center">
+        <h2 class="margin-36-bottom">Recent Hamilton Projects</h2>
+        <div class="horizontal-3-grid">
+          <div class="bin-cards">
+            <h4>TODO</h4>
+            <h3>Hamilton job photo 1</h3>
+            <p class="font-14-gray">TODO: real photo + short caption (neighbourhood, bin size, project type)</p>
+          </div>
+          <div class="bin-cards">
+            <h4>TODO</h4>
+            <h3>Hamilton job photo 2</h3>
+            <p class="font-14-gray">TODO: real photo + short caption (neighbourhood, bin size, project type)</p>
+          </div>
+          <div class="bin-cards">
+            <h4>TODO</h4>
+            <h3>Hamilton job photo 3</h3>
+            <p class="font-14-gray">TODO: real photo + short caption (neighbourhood, bin size, project type)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ: answered only with facts already on the site -->
+  <div class="section---white">
+    <div class="container-1200">
+      <div class="container-900">
+        <h2 class="margin-36-bottom">Hamilton Bin Rental FAQ</h2>
+
+        <h3>Do you rent bins in Hamilton?</h3>
+        <p class="paragraph-light">Yes. We drop off and pick up bins across Hamilton, including Stoney Creek, Ancaster, Dundas, Waterdown / Flamborough, Binbrook and Hamilton Mountain.</p>
+
+        <h3>What bin sizes do you have?</h3>
+        <p class="paragraph-light">Clean fill and clean rubble or asphalt bins come in 6, 16 and 20 yard sizes. Garbage bins come in 6, 14, 20 and 40 yard sizes. Dimensions and included tonnage are listed under <a href="#Pricing" class="inline-link">Bin Types and Sizes</a>.</p>
+
+        <h3>What can I put in a bin?</h3>
+        <p class="paragraph-light">Clean fill bins take clean dirt, topsoil, grass or sod only. Concrete and asphalt go in separate bins unless you arrange otherwise with dispatch, with no garbage or dirt. Garbage bins take household or construction waste. Hazardous materials such as paint, chemicals, liquids, tires and propane tanks are not allowed in any bin.</p>
+
+        <h3>How do I order a bin?</h3>
+        <p class="paragraph-light">Click Order Now to order online, call the office at <a href="tel:+19055379832" class="inline-link" data-cta="faq">905-537-9832</a>, or send us the <a href="#Estimate" class="inline-link">free estimate form</a>.</p>
+
+        <!-- TODO: verify Hamilton's street-bin permit rules and write this answer. Do not publish unanswered. -->
+        <h3>Do I need a permit to put a bin on the street in Hamilton?</h3>
+        <p class="paragraph-light">TODO: answer to be verified.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Other Services -->
+  <div class="section---black">
+    <div class="container-1200">
+      <div class="vertical-holder center">
+        <h2 class="h2-white">Other Services</h2>
+      </div>
+      <div class="equipment-grid---home">
+        <a href="/aggregate-gravel-soil-delivery" class="smaller-service-tile">
+          <img src="https://res.cloudinary.com/du0witbcr/image/upload/haulland-trucking/Deliver.png" loading="lazy" alt="" class="service-icon">
+          <p>Gravel, Aggregate, Soil &amp; Clean Fill Delivery</p>
+        </a>
+        <a href="/dirt-rubble-snow-removal" class="smaller-service-tile">
+          <img src="https://res.cloudinary.com/du0witbcr/image/upload/haulland-trucking/Land.png" loading="lazy" alt="" class="service-icon">
+          <p>Dirt, Rubble &amp; Snow Removal</p>
+        </a>
+        <a href="/contractor-yard-supply" class="smaller-service-tile">
+          <img src="https://res.cloudinary.com/du0witbcr/image/upload/haulland-trucking/Storage.png" loading="lazy" alt="" class="service-icon">
+          <p>Contractor Yard Supply</p>
+        </a>
+        <a href="/excavation-partner" class="smaller-service-tile">
+          <img src="https://res.cloudinary.com/du0witbcr/image/upload/haulland-trucking/Exc.png" loading="lazy" alt="" class="service-icon">
+          <p>Excavation Partner</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Total Excavation -->
+  <div class="total-excavation">
+    <div class="vertical-holder tx-holder">
+      <div class="about-holder-inner tx">
+        <p class="paragraph-white">EXCAVATION PARTNER</p>
+        <h2 class="h2-white">Total Excavation Inc.</h2>
+        <p class="paragraph-white">Total Excavation &amp; Haulland Trucking now working together seamlessly as one company.<br><br>We have become your most reliable dirt removal specialists.</p>
+        <a href="https://totalexcavation.ca/" class="btn">Visit Website</a>
+      </div>
+    </div>
+    <div class="bg-video-wrap total-video">
+      <video autoplay loop muted playsinline poster="https://res.cloudinary.com/du0witbcr/image/upload/haulland-trucking/992796506-poster-00001.jpg">
+        <source src="https://res.cloudinary.com/du0witbcr/video/upload/haulland-trucking/992796506.mp4" type="video/mp4">
+        <source src="https://res.cloudinary.com/du0witbcr/video/upload/haulland-trucking/992796506.webm" type="video/webm">
+      </video>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="container-1200">
+      <div class="footer-grid">
+        <div class="vertical-holder margin-30-right">
+          <img src="https://res.cloudinary.com/du0witbcr/image/upload/haulland-trucking/Haulland-Full-Logo.svg" loading="lazy" alt="Haulland Trucking" class="footer-logo">
+          <p class="paragraph-white small">We are ready to service you with our state of the art, Custom Built TriAxle Dump and Hook Lift Trucks. Many of our employees are machine operators, allowing us to load our own trucks to save you time and money.<br>Building strong relationships has been the key to our success. We'll work hard for you and you'll enjoy working with us too.</p>
+          <div class="footer-text">&#169;2026 Haulland Trucking Inc.</div>
+        </div>
+        <div class="vertical-holder">
+          <h4 class="h4-orange">Quick Links</h4>
+          <a href="/" class="footer-link">Home</a>
+          <a href="/about-us" class="footer-link">About Us</a>
+          <a href="https://totalexcavation.ca" class="footer-link">Total Excavation Inc.</a>
+          <a href="/contact-us" class="footer-link">Contact Us</a>
+        </div>
+        <div class="vertical-holder">
+          <h4 class="h4-orange">Our Services</h4>
+          <a href="/aggregate-gravel-soil-delivery" class="footer-link">Gravel, Aggregate, Soil &amp; Fill Delivery</a>
+          <a href="/dirt-rubble-snow-removal" class="footer-link">Dirt, Rubble &amp; Snow Removal</a>
+          <a href="/bin-rentals" class="footer-link">Bin Rentals</a>
+          <a href="/bin-rentals/hamilton" class="footer-link active">Bin Rentals – Hamilton</a>
+          <a href="/contractor-yard-supply" class="footer-link">Contractor Yard Supply</a>
+          <a href="/excavation-partner" class="footer-link">Excavation Partner</a>
+        </div>
+        <div class="vertical-holder">
+          <h4 class="h4-orange">Contact us</h4>
+          <div class="font-14-white-bold">Order Desk:</div>
+          <a href="tel:+19055379832" class="footer-link margin-4-bottom">(905) 537-9832 ext. 103</a>
+          <a href="mailto:mike@haullandtrucking.com?subject=Order%20Inquiry" class="footer-link margin-12-bottom">mike@haullandtrucking.com</a>
+          <div class="font-14-white-bold">Office:</div>
+          <a href="tel:+19055379832" class="footer-link margin-4-bottom">(905) 537-9832</a>
+          <a href="mailto:office@haullandtrucking.com?subject=Hello" class="footer-link">office@haullandtrucking.com</a>
+          <div class="social-icon-wrap">
+            <a href="https://www.instagram.com/haullandtrucking/" class="social-link-2">
+              <img src="https://res.cloudinary.com/du0witbcr/image/upload/haulland-trucking/Insta.png" alt="Instagram" class="social-icon">
+            </a>
+            <a href="https://www.facebook.com/haullandtrucking" class="social-link-2">
+              <img src="https://res.cloudinary.com/du0witbcr/image/upload/haulland-trucking/FB.png" alt="Facebook" class="social-icon">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LeadConnector Chat Widget -->
+  <script src="https://widgets.leadconnectorhq.com/loader.js"
+    data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+    data-widget-id="672e26aee99a32fd4ce39840"></script>
+
+  <!-- Brokrete Order Widget -->
+  <script async src="https://brokrete.sfo2.digitaloceanspaces.com/widget/brokrete-widget.2022.2.js"></script>
+  <div id="brokreteWidget" data-jwt="eyJhbGciOiJIUzI1NiJ9.eyJtb2RlIjoibWFpbiIsInR5cGUiOiJwb3B1cCIsImRlc2lnbiI6InNob3BfZnVsbHNjcmVlbiIsIm9wZW5MaW5rIjoiaHR0cHM6Ly9hcGkuYnJva3JldGUuY29tL3dpZGdldC8yZDNiYTAyMS1lZDY3LTRiOWUtOWVhNC00NjlmMDUwNDk4NWQvbGluayIsInBhcnRuZXIiOnsibmFtZSI6IkhhdWxsYW5kIFRydWNraW5nIEluYy4iLCJsb2dvIjoiaHR0cHM6Ly9jZG4udG91Z2hjb21tZXJjZS5jb20vcmVzb3VyY2UvcGFydG5lci9oYXVsbGFuZHRydWNraW5nL2xvZ29fNTFmYTBiNzI2NTAzMDNjZjczY2M3YWNjN2EzMGQxZWEucG5nIn0sInN0eWxlcyI6eyJidXR0b25CYWNrZ3JvdW5kQ29sb3IiOiIjNzgwMjAyIiwiYnV0dG9uVGl0bGVDb2xvciI6IiNmZmZmZmYiLCJidXR0b25UaXRsZSI6IkJ1eSBub3ciLCJidXR0b25BbGlnbiI6InJpZ2h0X2JvdHRvbSIsImJ1dHRvblNoaWZ0IjoiODAiLCJidXR0b25JbWFnZSI6ZmFsc2UsImJ1dHRvbkltYWdlQmFja2dyb3VuZCI6ZmFsc2UsImJ1dHRvbkltYWdlU2l6ZSI6IjcwIn19.susrPJo53cC86IsPLRlfbTuG3CSEmsgxqidXWoyrVgA"></div>
+
+  <script src="/js/main.js?v=20261111"></script>
+</body>
+</html>

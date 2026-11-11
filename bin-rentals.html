@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Bin Rentals Hamilton ON | Roll-Off Bins | Haulland Trucking</title>
+  <title>Bin Rentals | Roll-Off &amp; Mini Bins | Haulland Trucking</title>
   <meta name="description" content="Roll-off bin rentals in Hamilton and surrounding area. 6, 16, and 20-yard bins for clean fill, rubble, asphalt, and garbage. Live-dispatched fleet for fast turnaround. Call (905) 537-9832.">
-  <meta property="og:title" content="Bin Rentals Hamilton ON | Roll-Off Bins | Haulland Trucking">
+  <meta property="og:title" content="Bin Rentals | Roll-Off &amp; Mini Bins | Haulland Trucking">
   <meta property="og:description" content="Roll-off bin rentals in Hamilton and surrounding area. 6, 16, and 20-yard bins for clean fill, rubble, asphalt, and garbage. Live-dispatched fleet for fast turnaround. Call (905) 537-9832.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Bin Rentals Hamilton ON | Roll-Off Bins | Haulland Trucking">
+  <meta name="twitter:title" content="Bin Rentals | Roll-Off &amp; Mini Bins | Haulland Trucking">
   <meta name="twitter:description" content="Roll-off bin rentals in Hamilton and surrounding area. 6, 16, and 20-yard bins for clean fill, rubble, asphalt, and garbage. Live-dispatched fleet for fast turnaround. Call (905) 537-9832.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="https://res.cloudinary.com/du0witbcr/image/upload/haulland-trucking/favicon.jpg" type="image/x-icon">
@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/haulland.css?v=20261007" rel="stylesheet">
+  <link href="css/haulland.css?v=20261111" rel="stylesheet">
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-09X2V66G72"></script>
   <script>
@@ -174,10 +174,11 @@
         <div class="container-900 margin-36-bottom">
           <h1 class="h1-black">Bin Rentals</h1>
           <p class="paragraph-light _40-bottom">Waste removal is an important aspect of any job or home project. We have many different bin sizes to help remove all types of waste including clean fill, rubble, and garbage. We have a diverse fleet of trucks which are live dispatched resulting in quick turn around times for all your junk removal needs!</p>
+          <p class="paragraph-light">Find bin rentals near you: <a href="/bin-rentals/hamilton" class="inline-link">Hamilton</a></p>
           <h3>Service Locations</h3>
           <div class="_3-column-grid margin-36-bottom">
             <ul role="list" class="list">
-              <li><h4>Hamilton</h4></li>
+              <li><h4><a href="/bin-rentals/hamilton" class="inline-link">Hamilton</a></h4></li>
               <li><h4>Burlington</h4></li>
               <li><h4>Brantford</h4></li>
               <li><h4>Stoney Creek</h4></li>
@@ -227,6 +228,7 @@
       <div class="vertical-holder center">
         <h2 class="red margin-36-bottom">Available Bin Types</h2>
 
+        <!-- SHARED:bin-types:start (source of truth; copied to location pages by scripts/sync-shared.mjs) -->
         <div class="vertical-holder fill">
           <div class="vertical-holder">
             <h2 class="margin-36-bottom">Clean Fill</h2>
@@ -313,6 +315,7 @@
             </div>
           </div>
         </div>
+        <!-- SHARED:bin-types:end -->
 
       </div>
     </div>
@@ -339,6 +342,7 @@
               <input type="hidden" name="access_key" value="a29c2119-8653-47eb-b9ee-e5156dd2a526">
               <input type="hidden" name="subject" value="New Bin Rental Estimate — Haulland Trucking">
               <input type="hidden" name="from_name" value="Haulland Trucking Website">
+              <input type="hidden" name="source_page" value="bin-rentals">
               <input type="checkbox" name="botcheck" style="display:none;">
               <h2>Get a Free Estimate</h2>
               <p>Interested in working with us? Just give us a call and we can supply you with the aggregates, soils &amp; fill you need to complete your project.</p>
@@ -358,7 +362,8 @@
                 </div>
                 <label for="service-2">What service/s do you require?*</label>
                 <select id="service-2" name="Service" required class="text-field dropdown">
-                  <option value="">Roll-Off Bin Service</option>
+                  <option value="">Select a service</option>
+                  <option value="Roll-Off Bin Service" selected>Roll-Off Bin Service</option>
                   <option value="Gravel Delivery">Gravel Delivery</option>
                   <option value="Aggregates Delivery">Aggregates Delivery</option>
                   <option value="Soil Delivery">Soil Delivery</option>
@@ -467,6 +472,7 @@
           <a href="/aggregate-gravel-soil-delivery" class="footer-link">Gravel, Aggregate, Soil &amp; Fill Delivery</a>
           <a href="/dirt-rubble-snow-removal" class="footer-link">Dirt, Rubble &amp; Snow Removal</a>
           <a href="/bin-rentals" class="footer-link active">Bin Rentals</a>
+          <a href="/bin-rentals/hamilton" class="footer-link">Bin Rentals – Hamilton</a>
           <a href="/contractor-yard-supply" class="footer-link">Contractor Yard Supply</a>
           <a href="/excavation-partner" class="footer-link">Excavation Partner</a>
         </div>
@@ -500,6 +506,6 @@
   <script async src="https://brokrete.sfo2.digitaloceanspaces.com/widget/brokrete-widget.2022.2.js"></script>
   <div id="brokreteWidget" data-jwt="eyJhbGciOiJIUzI1NiJ9.eyJtb2RlIjoibWFpbiIsInR5cGUiOiJwb3B1cCIsImRlc2lnbiI6InNob3BfZnVsbHNjcmVlbiIsIm9wZW5MaW5rIjoiaHR0cHM6Ly9hcGkuYnJva3JldGUuY29tL3dpZGdldC8yZDNiYTAyMS1lZDY3LTRiOWUtOWVhNC00NjlmMDUwNDk4NWQvbGluayIsInBhcnRuZXIiOnsibmFtZSI6IkhhdWxsYW5kIFRydWNraW5nIEluYy4iLCJsb2dvIjoiaHR0cHM6Ly9jZG4udG91Z2hjb21tZXJjZS5jb20vcmVzb3VyY2UvcGFydG5lci9oYXVsbGFuZHRydWNraW5nL2xvZ29fNTFmYTBiNzI2NTAzMDNjZjczY2M3YWNjN2EzMGQxZWEucG5nIn0sInN0eWxlcyI6eyJidXR0b25CYWNrZ3JvdW5kQ29sb3IiOiIjNzgwMjAyIiwiYnV0dG9uVGl0bGVDb2xvciI6IiNmZmZmZmYiLCJidXR0b25UaXRsZSI6IkJ1eSBub3ciLCJidXR0b25BbGlnbiI6InJpZ2h0X2JvdHRvbSIsImJ1dHRvblNoaWZ0IjoiODAiLCJidXR0b25JbWFnZSI6ZmFsc2UsImJ1dHRvbkltYWdlQmFja2dyb3VuZCI6ZmFsc2UsImJ1dHRvbkltYWdlU2l6ZSI6IjcwIn19.susrPJo53cC86IsPLRlfbTuG3CSEmsgxqidXWoyrVgA"></div>
 
-  <script src="js/main.js?v=20261007"></script>
+  <script src="js/main.js?v=20261111"></script>
 </body>
 </html>

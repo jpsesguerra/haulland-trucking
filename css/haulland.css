@@ -2921,3 +2921,61 @@ html, body {
     text-align: center;
   }
 }
+
+/* Secondary "Contact Us" phone button: sits to the right of a primary Order Now.
+   Outline version of the Order Now button for white backgrounds; tokens only. */
+.call-cta {
+  border: 2px solid var(--maroon2);
+  background-color: var(--white);
+  color: var(--maroon2);
+  padding: 14px 18px;
+  font-family: Gotham, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  transition: background-color .2s, color .2s;
+}
+
+.call-cta:hover {
+  background-color: var(--maroon2);
+  color: var(--white);
+}
+
+/* Text links inside copy and lists: keep the surrounding colour, underline only */
+.inline-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.inline-link:hover {
+  color: var(--maroon2);
+}
+
+/* Primary + secondary CTA pair: side by side, wraps when the column is narrow */
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+@media screen and (max-width: 767px) {
+  .cta-row {
+    flex-direction: column;
+  }
+
+  .cta-row .btn {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Match the Order Now button's small-phone font size */
+@media screen and (max-width: 479px) {
+  .call-cta {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}

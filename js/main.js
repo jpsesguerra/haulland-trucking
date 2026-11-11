@@ -103,11 +103,43 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // ── GA4 helpers ──
+  // Never let analytics (blocked or not yet loaded) break a button.
+  function track(eventName, params) {
+    try {
+      if (typeof gtag === 'function') gtag('event', eventName, params);
+    } catch (err) { /* ignore */ }
+  }
+
+  // Where on the page a CTA sits. An explicit data-cta attribute wins;
+  // otherwise it's derived from the surrounding section.
+  function ctaLocation(el) {
+    if (el.dataset.cta) return el.dataset.cta;
+    if (el.closest('.sticky-nav')) return 'header';
+    if (el.closest('.hero-section')) return 'hero';
+    if (el.closest('.bin-cards')) return 'bin_card';
+    if (el.closest('.footer')) return 'footer';
+    return 'page_body';
+  }
+
+  function ctaParams(el) {
+    var params = {
+      page_path: window.location.pathname,
+      cta_location: ctaLocation(el),
+      link_text: (el.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 100)
+    };
+    var card = el.closest('.bin-cards');
+    var heading = card && card.querySelector('h3');
+    if (heading) params.bin_type = (heading.innerText || heading.textContent).replace(/\s+/g, ' ').trim();
+    return params;
+  }
+
   // ── Phone click tracking ──
+  // Covers every tel: link, including the header CTA once it switches to tel: on phones.
   document.addEventListener('click', function (e) {
     var link = e.target.closest('a[href^="tel:"]');
     if (link) {
-      gtag('event', 'phone_click', { page_path: window.location.pathname });
+      track('phone_click', ctaParams(link));
     }
   });
 
@@ -123,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
             form.style.display = 'none';
             var success = form.closest('.contact-form').querySelector('.success');
             if (success) success.style.display = 'block';
-            gtag('event', 'form_submit', { page_path: window.location.pathname });
+            track('form_submit', { page_path: window.location.pathname });
           } else {
             alert('Something went wrong. Please try again or call us directly.');
           }
@@ -139,6 +171,7 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.addEventListener('click', function (e) {
       e.preventDefault();
       window.postMessage({ name: 'BrokreteWidget', action: 'open' }, '*');
+      track('order_now_click', ctaParams(btn));
     });
   });
 
